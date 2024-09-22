@@ -70,7 +70,7 @@
 
       <div class="navbar-end space-x-2">
         <img src="./assets/coin.png" alt="">
-        <p class="font-medium text-xl text-gray-500">5200 <span>BDT</span></p>
+        <p class="font-medium text-xl text-gray-500"><span id="main-balance">5200</span> BDT </p>
       </div>
     </nav>
 
@@ -84,7 +84,7 @@
   </section>
 
   <!-- main section start  -->
-  <main class="mt-60 space-y-7 mb-10 ">
+  <main class="mt-52 space-y-7 mb-10 ">
 
     <!-- card 1 -->
     <div class="w-11/12 md:w-10/12 mx-auto border rounded-2xl p-5">
@@ -94,9 +94,9 @@
         </div>
 
         <div class="space-y-2 lg:space-y-5 2xl:space-y-6 flex-1">
-          <div class="py-2  px-5 w-36 rounded-lg  bg-gray-200 flex space-x-2">
+          <div class="py-2  px-5 w-40  rounded-lg  bg-gray-200 flex items-center space-x-2">
             <img src="./assets/coin.png" alt="">
-            <button>00 <span>BDT</span></button>
+            <p class="text-gray-400"><span id="noakhali-donated">00</span> <span>BDT</span></p>
           </div>
           <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh!</h1>
           <p class="py-2 2xl:py-4 font-light leading-6">
@@ -108,10 +108,12 @@
           </p>
 
 
-          <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+          <input id="noakhali-input" type="text" placeholder="Write Donation Amount"
+            class="input input-bordered w-full " />
 
-          <div class="py-3 bg-blog_btn rounded-lg text-xl font-semibold text-center">
-            <button class=" ">Donate Now</button>
+          <div id="noakhali-donate-btn"
+            class="cursor-pointer py-3 bg-blog_btn rounded-lg text-xl font-semibold text-center">
+            <button>Donate Now</button>
           </div>
         </div>
       </div>
@@ -125,9 +127,9 @@
         </div>
 
         <div class="space-y-2 lg:space-y-5 2xl:space-y-6 flex-1">
-          <div class="py-2  px-5 w-36 rounded-lg  bg-gray-200 flex space-x-2">
+          <div class="py-2  px-5 w-40  rounded-lg  bg-gray-200 flex items-center space-x-2">
             <img src="./assets/coin.png" alt="">
-            <button>00 <span>BDT</span></button>
+            <p class="text-gray-400"><span id="feni-donated">600</span> <span>BDT</span></p>
           </div>
           <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
           <p class="py-2 2xl:py-4 font-light leading-6">
@@ -142,14 +144,16 @@
           </p>
 
 
-          <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+          <input id="feni-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
 
-          <div class="py-3 bg-blog_btn rounded-lg text-xl font-semibold text-center">
-            <button class=" ">Donate Now</button>
+          <div id="feni-donate-btn"
+            class="cursor-pointer py-3 bg-blog_btn rounded-lg text-xl font-semibold text-center">
+            <button>Donate Now</button>
           </div>
         </div>
       </div>
     </div>
+
     <!-- card 3 -->
     <div class="w-11/12 md:w-10/12 mx-auto border rounded-2xl p-5">
       <div class="  flex flex-col gap-5 xl:flex-row ">
@@ -158,9 +162,9 @@
         </div>
 
         <div class="space-y-2 lg:space-y-5 2xl:space-y-6 flex-1">
-          <div class="py-2  px-5 w-36 rounded-lg  bg-gray-200 flex space-x-2">
+          <div class="py-2  px-5 w-40  rounded-lg  bg-gray-200 flex items-center space-x-2">
             <img src="./assets/coin.png" alt="">
-            <button>00 <span>BDT</span></button>
+            <p class="text-gray-400"> <span id="quota-donated">500</span> <span>BDT</span></p>
           </div>
           <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
           <p class="py-2 2xl:py-4 font-light leading-6">
@@ -176,15 +180,39 @@
           </p>
 
 
-          <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+          <input id="quota-input" type="text" placeholder="Write Donation Amount"
+            class="input input-bordered w-full " />
 
-          <div class="py-3 bg-blog_btn rounded-lg text-xl font-semibold text-center">
-            <button class=" ">Donate Now</button>
+          <div id="quota-donate-btn"
+            class="cursor-pointer py-3 bg-blog_btn rounded-lg text-xl font-semibold text-center">
+            <button>Donate Now</button>
           </div>
         </div>
       </div>
     </div>
+
+
   </main>
+
+  <!-- modal congrats -->
+  <section id="congrats-modal" class=" hidden inset-0 justify-center items-center fixed backdrop-blur-sm">
+    <div class="card bg-base-200 w-[500px] p-12 text-center">
+
+      <div class="card-body space-y-4">
+        <h2 class="font-bold text-4xl text-gray-600">congrats!!</h2>
+        <div class="justify-center flex ">
+          <img class="w-14" src="./assets/coin.png" alt="">
+        </div>
+        <p class="font-medium text-xl text-gray-500 ">You Have Donated for Humankid</p>
+
+        <h1 class="font-bold text-2xl text-gray-700">Successfully</h1>
+        <div class="card-actions justify-center">
+          <button id="close-confirm-btn" class="btn border-none   bg-base-300 text-base">close confirmation</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/utilits.js"></script>
   <script src="js/index.js"></script>
 </body>
 
