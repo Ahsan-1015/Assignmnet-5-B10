@@ -58,7 +58,7 @@
   <section class="fixed top-0 w-full backdrop-blur-lg">
     <!-- nav section start -->
     <nav class="navbar bg-base-200 px-5 md:px-36 py-3 pb-9 ">
-      <div class="navbar-start ">
+      <div id="blog-btn" class="navbar-start ">
 
         <a href="#" class="py-3 px-8   bg-blog_btn text-xl font-semibold border-none border rounded-lg">Blog</a>
       </div>
@@ -70,15 +70,19 @@
 
       <div class="navbar-end space-x-2">
         <img src="./assets/coin.png" alt="">
-        <p class="font-medium text-xl text-gray-500"><span id="main-balance">5200</span> BDT </p>
+        <p class="font-medium text-xl text-gray-500"><span id="main-balance">6000</span> BDT </p>
       </div>
     </nav>
 
     <!-- header section start -->
+    <!-- donation and history tab btn... -->
+
     <header class="mt-10 w-11/12 md:w-10/12 mx-auto ">
       <div class="flex justify-between md:justify-center gap-2 md:gap-4 ">
-        <button class="py-3 px-7 lg:px-16 bg-blog_btn rounded-lg text-xl font-semibold">Donation</button>
-        <button class="py-3 px-7 lg:px-16 border rounded-lg text-xl font-medium text-gray-500">History</button>
+        <button id="donation-btn"
+          class="py-3 px-7 lg:px-16 bg-blog_btn rounded-lg text-xl font-semibold">Donation</button>
+        <button id="history-btn"
+          class="py-3 px-7 lg:px-16 border rounded-lg text-xl font-semibold text-gray-500">History</button>
       </div>
     </header>
   </section>
@@ -212,6 +216,11 @@
       </div>
     </div>
   </section>
+
+  <footer class="bg-base-200 h-20">
+
+  </footer>
+
   <script src="js/utilits.js"></script>
   <script src="js/index.js"></script>
 </body>

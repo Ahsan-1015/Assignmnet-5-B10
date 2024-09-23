@@ -108,3 +108,29 @@ const quotaInputBtn = document
     const zero = document.getElementById('quota-input');
     zero.value = '';
   });
+
+// blog section start
+const blogBtn = document
+  .getElementById('blog-btn')
+  .addEventListener('click', function () {
+    window.location.href = '/blog.html';
+  });
+
+// history donation btn functionally
+const historyBtn = document.getElementById('history-btn');
+historyBtn.addEventListener('click', function () {
+  historyBtn.classList.add('bg-blog_btn');
+  historyBtn.classList.remove('text-gray-500', 'border');
+
+  donationBtn.classList.remove('bg-blog_btn');
+  donationBtn.classList.add('border', 'text-gray-500');
+});
+
+const donationBtn = document.getElementById('donation-btn');
+donationBtn.addEventListener('click', function () {
+  historyBtn.classList.remove('bg-blog_btn');
+  historyBtn.classList.add('text-gray-500', 'border');
+
+  donationBtn.classList.add('bg-blog_btn');
+  donationBtn.classList.remove('border', 'text-gray-500');
+});
