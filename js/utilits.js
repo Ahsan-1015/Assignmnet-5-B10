@@ -1,9 +1,9 @@
 function inputValueGetElementById(id) {
-  return Number(document.getElementById(id).value).toFixed(2);
+  return Number(document.getElementById(id).value);
 }
 
 function getTextFiledValueById(id) {
-  return Number(document.getElementById(id).innerText).toFixed(2);
+  return Number(document.getElementById(id).innerText);
 }
 
 function showSectionById(id) {

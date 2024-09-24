@@ -28,6 +28,8 @@
 
             'blog_btn': '#B4F461',
 
+            'blog_btn_hover': '#b7eb73',
+
 
           },
 
@@ -44,12 +46,13 @@
 
 <body class="font-Lexend ">
 
-  <section class="fixed top-0 w-full backdrop-blur-lg">
+  <section class="sticky top-0 w-full backdrop-blur-lg">
     <!-- nav section start -->
     <nav class="navbar bg-base-200 px-5 md:px-36 py-3 pb-9 ">
       <div id="blog-btn" class="navbar-start ">
 
-        <a href="#" class="py-3 px-8   bg-blog_btn text-xl font-semibold border-none border rounded-lg">Blog</a>
+        <a href="#"
+          class="py-2 md:py-3 px-8   bg-blog_btn text-xl font-semibold border-none border rounded-lg hover:bg-blog_btn_hover">Blog</a>
       </div>
 
       <div class="navbar-center hidden lg:flex space-x-3">
@@ -59,7 +62,7 @@
 
       <div class="navbar-end space-x-2">
         <img src="./assets/coin.png" alt="">
-        <p class="font-medium text-xl text-gray-500"><span id="main-balance">6000</span> BDT </p>
+        <p class="font-medium text-sm md:text-xl text-gray-500"><span id="main-balance">6000</span> BDT </p>
       </div>
     </nav>
 
@@ -69,9 +72,9 @@
     <header class="mt-10 w-11/12 md:w-10/12 mx-auto ">
       <div class="flex justify-between md:justify-center gap-2 md:gap-4 ">
         <button id="donation-btn"
-          class="py-3 px-7 lg:px-16 bg-blog_btn rounded-lg text-xl font-semibold">Donation</button>
+          class="py-3 px-7 lg:px-16 bg-blog_btn hover:bg-blog_btn_hover rounded-lg text-xl font-semibold">Donation</button>
         <button id="history-btn"
-          class="py-3 px-7 lg:px-16 border rounded-lg text-xl font-semibold text-gray-500">History</button>
+          class="py-3 px-7 lg:px-16 border-2 rounded-lg text-xl font-semibold text-gray-500">History</button>
       </div>
 
 
@@ -80,20 +83,20 @@
 
 
   <!-- main section start  -->
-  <main id="donation-form" class="mt-52  space-y-7 mb-10 ">
+  <main id="donation-form" class=" mt-6  space-y-7 mb-10 ">
 
     <!-- card 1 -->
-    <div class="w-11/12 md:w-10/12 mx-auto border rounded-2xl p-5">
+    <div class="w-11/12 md:w-10/12 mx-auto border-2 rounded-2xl p-5">
       <div class="  flex flex-col gap-5 xl:flex-row ">
         <div class="flex-1 items-center justify-center xl:justify-between flex ">
           <img src="./assets/noakhali.png" class=" rounded-lg shadow-2xl" />
         </div>
 
         <div class="space-y-2 lg:space-y-5 2xl:space-y-6 flex-1">
-          <div class="py-2  px-5 w-40  rounded-lg  bg-gray-200 flex items-center space-x-2">
+          <button class="py-2  px-5   rounded-lg  bg-gray-200 flex items-center space-x-2">
             <img src="./assets/coin.png" alt="">
-            <p class="text-gray-400"><span id="noakhali-donated">00</span> <span>BDT</span></p>
-          </div>
+            <p class="text-gray-400"><span id="noakhali-donated">100</span> <span>BDT</span></p>
+          </button>
           <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh!</h1>
           <p class="py-2 2xl:py-4 font-light leading-6">
             The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
@@ -108,7 +111,7 @@
             class="input input-bordered w-full " />
 
           <div id="noakhali-donate-btn"
-            class="cursor-pointer py-3 bg-blog_btn rounded-lg text-xl font-semibold text-center">
+            class="cursor-pointer hover:bg-blog_btn_hover py-3 bg-blog_btn rounded-lg text-xl font-semibold text-center">
             <button>Donate Now</button>
           </div>
         </div>
@@ -116,17 +119,17 @@
     </div>
 
     <!-- card 2 -->
-    <div class="w-11/12 md:w-10/12 mx-auto border rounded-2xl p-5">
+    <div class="w-11/12 md:w-10/12 mx-auto border-2 rounded-2xl p-5">
       <div class="  flex flex-col gap-5 xl:flex-row ">
         <div class="flex-1 items-center justify-center xl:justify-between flex ">
           <img src="./assets/feni.png" class=" rounded-lg shadow-2xl" />
         </div>
 
         <div class="space-y-2 lg:space-y-5 2xl:space-y-6 flex-1">
-          <div class="py-2  px-5 w-40  rounded-lg  bg-gray-200 flex items-center space-x-2">
+          <button class="py-2  px-5   rounded-lg  bg-gray-200 flex items-center space-x-2">
             <img src="./assets/coin.png" alt="">
             <p class="text-gray-400"><span id="feni-donated">600</span> <span>BDT</span></p>
-          </div>
+          </button>
           <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
           <p class="py-2 2xl:py-4 font-light leading-6">
             The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your
@@ -143,7 +146,7 @@
           <input id="feni-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
 
           <div id="feni-donate-btn"
-            class="cursor-pointer py-3 bg-blog_btn rounded-lg text-xl font-semibold text-center">
+            class="cursor-pointer hover:bg-blog_btn_hover py-3 bg-blog_btn  rounded-lg text-xl font-semibold text-center">
             <button>Donate Now</button>
           </div>
         </div>
@@ -151,17 +154,17 @@
     </div>
 
     <!-- card 3 -->
-    <div class="w-11/12 md:w-10/12 mx-auto border rounded-2xl p-5">
+    <div class="w-11/12 md:w-10/12 mx-auto border-2 rounded-2xl p-5">
       <div class="  flex flex-col gap-5 xl:flex-row ">
         <div class="flex-1 items-center justify-center xl:justify-between flex ">
           <img src="./assets/quota-protest.png" class=" rounded-lg shadow-2xl" />
         </div>
 
         <div class="space-y-2 lg:space-y-5 2xl:space-y-6 flex-1">
-          <div class="py-2  px-5 w-40  rounded-lg  bg-gray-200 flex items-center space-x-2">
+          <button class="py-2  px-5  rounded-lg  bg-gray-200 flex items-center space-x-2">
             <img src="./assets/coin.png" alt="">
             <p class="text-gray-400"> <span id="quota-donated">500</span> <span>BDT</span></p>
-          </div>
+          </button>
           <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
           <p class="py-2 2xl:py-4 font-light leading-6">
             The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals.
@@ -180,7 +183,7 @@
             class="input input-bordered w-full " />
 
           <div id="quota-donate-btn"
-            class="cursor-pointer py-3 bg-blog_btn rounded-lg text-xl font-semibold text-center">
+            class="cursor-pointer hover:bg-blog_btn_hover py-3 bg-blog_btn rounded-lg text-xl font-semibold text-center">
             <button>Donate Now</button>
           </div>
         </div>
@@ -209,7 +212,7 @@
     </div>
   </section>
 
-  <div id="history-form" class="hidden mt-72 space-y-3 mb-96">
+  <div id="history-form" class="hidden mt-28 space-y-3 mb-96">
 
   </div>
 
@@ -219,10 +222,7 @@
   </footer>
 
   <script src="js/utilits.js"></script>
-  <script src="js/history.js"></script>
   <script src="js/index.js"></script>
-
-  <script src="js/reset.js"></script>
   <script src="js/featurs.js"></script>
 </body>
 
