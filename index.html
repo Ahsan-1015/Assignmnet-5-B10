@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -21,17 +21,6 @@
       theme: {
         extend: {
           colors: {
-            'primary_color': '#ABEF5F',
-
-            'secondary_color': '#ABEF5F80',
-
-            'work_concept': '#E7C1D3',
-
-            'work_budget': '#77AAEA',
-
-            'work_design': '#EFDA6E',
-
-            'work_Supervision': '#A4DAC3',
 
             'dark2_subtitle': '#494949',
 
@@ -84,11 +73,14 @@
         <button id="history-btn"
           class="py-3 px-7 lg:px-16 border rounded-lg text-xl font-semibold text-gray-500">History</button>
       </div>
+
+
     </header>
   </section>
 
+
   <!-- main section start  -->
-  <main class="mt-52 space-y-7 mb-10 ">
+  <main id="donation-form" class="mt-52  space-y-7 mb-10 ">
 
     <!-- card 1 -->
     <div class="w-11/12 md:w-10/12 mx-auto border rounded-2xl p-5">
@@ -217,12 +209,21 @@
     </div>
   </section>
 
-  <footer class="bg-base-200 h-20">
+  <div id="history-form" class="hidden mt-72 space-y-3 mb-96">
+
+  </div>
+
+
+  <footer class="bg-base-200 h-20 ">
 
   </footer>
 
   <script src="js/utilits.js"></script>
   <script src="js/index.js"></script>
+
+  <script src="js/reset.js"></script>
+  <script src="js/featurs.js"></script>
+  <script src="js/history.js"></script>
 </body>
 
 </html>

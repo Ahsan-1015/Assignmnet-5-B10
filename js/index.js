@@ -1,5 +1,6 @@
-// noakhali pert start
-const noakhaliDonateBtn = document
+// -----------[noakhali pert start]--------
+
+document
   .getElementById('noakhali-donate-btn')
   .addEventListener('click', function () {
     const noakhaliInput = inputValueGetElementById('noakhali-input');
@@ -9,7 +10,10 @@ const noakhaliDonateBtn = document
       noakhaliInput <= 0 ||
       noakhaliInput > mainBalance
     ) {
+      // document.getElementById('history-form').classList.add('hidden');
       alert('Please Enter Your Correct Number');
+      // const zero = document.getElementById('noakhali-input');
+      // zero.value = '';
       return;
     }
     // congrats modal start
@@ -21,9 +25,6 @@ const noakhaliDonateBtn = document
     closeConfirmBtn.addEventListener('click', function () {
       congratsModal.classList.add('hidden');
     });
-    // congrats modal end
-
-    // main balance set
 
     const noakhaliCurrentDonate = getTextFiledValueById('noakhali-donated');
 
@@ -32,13 +33,10 @@ const noakhaliDonateBtn = document
 
     const updateBalance = mainBalance - noakhaliInput;
     document.getElementById('main-balance').innerText = updateBalance;
-
-    const zero = document.getElementById('noakhali-input');
-    zero.value = '';
   });
 // noakhali pert end
 
-// feni pert start
+// ----------[feni part start]--------------
 const feniInputBtn = document
   .getElementById('feni-donate-btn')
   .addEventListener('click', function () {
@@ -58,6 +56,9 @@ const feniInputBtn = document
     const closeConfirmBtn = document.getElementById('close-confirm-btn');
     closeConfirmBtn.addEventListener('click', function () {
       congratsModal.classList.add('hidden');
+
+      // const zero = document.getElementById('feni-input');
+      // zero.value = '';
     });
     // congrats modal end
 
@@ -75,7 +76,7 @@ const feniInputBtn = document
 
 // feni part end
 
-//  quota part start
+//  quota part start------------
 const quotaInputBtn = document
   .getElementById('quota-donate-btn')
   .addEventListener('click', function () {
@@ -83,6 +84,7 @@ const quotaInputBtn = document
     const quotaInput = inputValueGetElementById('quota-input');
     if (isNaN(quotaInput) || quotaInput <= 0 || quotaInput > mainBalance) {
       alert('Please Enter Your Correct Number');
+
       return;
     }
 
@@ -94,6 +96,9 @@ const quotaInputBtn = document
     const closeConfirmBtn = document.getElementById('close-confirm-btn');
     closeConfirmBtn.addEventListener('click', function () {
       congratsModal.classList.add('hidden');
+
+      const zero = document.getElementById('quota-input');
+      zero.value = '';
     });
     // congrats modal end
 
@@ -104,19 +109,17 @@ const quotaInputBtn = document
 
     const updateBalance = mainBalance - quotaInput;
     document.getElementById('main-balance').innerText = updateBalance;
-
-    const zero = document.getElementById('quota-input');
-    zero.value = '';
   });
+// quota part end
 
-// blog section start
+// blog section start-----------
 const blogBtn = document
   .getElementById('blog-btn')
   .addEventListener('click', function () {
     window.location.href = '/blog.html';
   });
 
-// history donation btn functionally
+// history donation btn functionally------
 const historyBtn = document.getElementById('history-btn');
 historyBtn.addEventListener('click', function () {
   historyBtn.classList.add('bg-blog_btn');
