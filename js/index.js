@@ -10,10 +10,10 @@ document
       noakhaliInput <= 0 ||
       noakhaliInput > mainBalance
     ) {
-      // document.getElementById('history-form').classList.add('hidden');
       alert('Please Enter Your Correct Number');
-      // const zero = document.getElementById('noakhali-input');
-      // zero.value = '';
+
+      const zero = document.getElementById('noakhali-input');
+      zero.value = '';
       return;
     }
     // congrats modal start
@@ -33,11 +33,35 @@ document
 
     const updateBalance = mainBalance - noakhaliInput;
     document.getElementById('main-balance').innerText = updateBalance;
+
+    const noakhaliHistoryForm = document.getElementById('history-form');
+    const p = document.createElement('p');
+    p.classList.add(
+      'space-y-1',
+      'w-11/12',
+      'md:w-8/12',
+      'mx-auto',
+      'p-2',
+      'md:p-8',
+      'border-2',
+      'rounded-xl',
+      'space-y-2'
+    );
+    p.innerHTML = `
+  <p class ="text-base md:text-xl font-bold "> ${noakhaliInput} Taka is Donated for famine-2024 at noakhali, Bangladesh</p>
+  <p class ="text-xs md:text-base bg-base-200 p-2 rounded-md"> ${new Date()}</p>
+
+`;
+    noakhaliHistoryForm.appendChild(p);
+
+    // reset input
+    const zero = document.getElementById('noakhali-input');
+    zero.value = '';
   });
 // noakhali pert end
 
 // ----------[feni part start]--------------
-const feniInputBtn = document
+document
   .getElementById('feni-donate-btn')
   .addEventListener('click', function () {
     const feniInput = inputValueGetElementById('feni-input');
@@ -45,6 +69,9 @@ const feniInputBtn = document
 
     if (isNaN(feniInput) || feniInput <= 0 || feniInput > mainBalance) {
       alert('Please Enter Your Correct Number');
+
+      const zero = document.getElementById('feni-input');
+      zero.value = '';
       return;
     }
 
@@ -56,9 +83,6 @@ const feniInputBtn = document
     const closeConfirmBtn = document.getElementById('close-confirm-btn');
     closeConfirmBtn.addEventListener('click', function () {
       congratsModal.classList.add('hidden');
-
-      // const zero = document.getElementById('feni-input');
-      // zero.value = '';
     });
     // congrats modal end
 
@@ -70,13 +94,33 @@ const feniInputBtn = document
     const updateBalance = mainBalance - feniInput;
     document.getElementById('main-balance').innerText = updateBalance;
 
+    const historyForm = document.getElementById('history-form');
+    const p = document.createElement('p');
+    p.classList.add(
+      'space-y-1',
+      'w-11/12',
+      'md:w-8/12',
+      'mx-auto',
+      'p-2',
+      'md:p-8',
+      'border-2',
+      'rounded-xl',
+      'space-y-2'
+    );
+    p.innerHTML = `
+  <p class ="text-base md:text-xl font-bold "> ${feniInput} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
+  <p class ="text-xs md:text-base bg-base-200 p-2 rounded-md"> ${new Date()}</p>
+
+`;
+    historyForm.appendChild(p);
+
     const zero = document.getElementById('feni-input');
     zero.value = '';
   });
 
 // feni part end
 
-//  quota part start------------
+//-------------[quota part start]------------
 const quotaInputBtn = document
   .getElementById('quota-donate-btn')
   .addEventListener('click', function () {
@@ -85,6 +129,8 @@ const quotaInputBtn = document
     if (isNaN(quotaInput) || quotaInput <= 0 || quotaInput > mainBalance) {
       alert('Please Enter Your Correct Number');
 
+      const zero = document.getElementById('quota-input');
+      zero.value = '';
       return;
     }
 
@@ -96,9 +142,6 @@ const quotaInputBtn = document
     const closeConfirmBtn = document.getElementById('close-confirm-btn');
     closeConfirmBtn.addEventListener('click', function () {
       congratsModal.classList.add('hidden');
-
-      const zero = document.getElementById('quota-input');
-      zero.value = '';
     });
     // congrats modal end
 
@@ -109,17 +152,41 @@ const quotaInputBtn = document
 
     const updateBalance = mainBalance - quotaInput;
     document.getElementById('main-balance').innerText = updateBalance;
+
+    const historyForm = document.getElementById('history-form');
+    const p = document.createElement('p');
+    p.classList.add(
+      'space-y-1',
+      'w-11/12',
+      'md:w-8/12',
+      'mx-auto',
+      'p-2',
+      'md:p-8',
+      'border-2',
+      'rounded-xl',
+      'space-y-2'
+    );
+    p.innerHTML = `
+  <p class ="text-base md:text-xl font-bold "> ${quotaInput} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+  <p class ="text-xs md:text-base bg-base-200 p-2 rounded-md"> ${new Date()}</p>
+
+`;
+    historyForm.appendChild(p);
+
+    // reset input
+    const zero = document.getElementById('quota-input');
+    zero.value = '';
   });
 // quota part end
 
-// blog section start-----------
+// ----------[blog section start]-----------
 const blogBtn = document
   .getElementById('blog-btn')
   .addEventListener('click', function () {
     window.location.href = '/blog.html';
   });
 
-// history donation btn functionally------
+// ----------[history donation btn functionally]-------
 const historyBtn = document.getElementById('history-btn');
 historyBtn.addEventListener('click', function () {
   historyBtn.classList.add('bg-blog_btn');
